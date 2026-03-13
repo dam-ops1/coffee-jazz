@@ -1,3 +1,5 @@
+const apiUrl = 'http://localhost:8080';
+
 async function enviarFormulario(event) {
     event.preventDefault();
 
@@ -13,7 +15,7 @@ async function enviarFormulario(event) {
     const datos = { nombre, email, mensaje };
 
     try {
-        const response = await fetch('http://localhost:8080/contacto/save', {
+        const response = await fetch(`${apiUrl}/contacto/save`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(datos)
