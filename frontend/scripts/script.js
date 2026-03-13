@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:8080';
+const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:8080' : 'https://tu-url-railway.up.railway.app';
 
 async function enviarFormulario(event) {
     event.preventDefault();
